@@ -2,12 +2,8 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
-SHELL = cmd.exe
-
-CG_TOOL_ROOT := C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS
-
-GEN_OPTS__FLAG := --cmd_file="C:/Users/dell/workspace_v10/tirtos_builds_CC1310_LAUNCHXL_release_ccs/Debug/configPkg/compiler.opt" 
-GEN_CMDS__FLAG := -l"C:/Users/dell/workspace_v10/tirtos_builds_CC1310_LAUNCHXL_release_ccs/Debug/configPkg/linker.cmd" 
+GEN_OPTS__FLAG := --cmd_file="/Users/wsy/Desktop/Research/CCcode/CC1310IQSamples/tirtos_builds_CC1310_LAUNCHXL_release_ccs/Debug/configPkg/compiler.opt" 
+GEN_CMDS__FLAG := -l"/Users/wsy/Desktop/Research/CCcode/CC1310IQSamples/tirtos_builds_CC1310_LAUNCHXL_release_ccs/Debug/configPkg/linker.cmd" 
 
 ORDERED_OBJS += \
 "./CC1310_LAUNCHXL.obj" \
@@ -30,8 +26,8 @@ $(GEN_CMDS__FLAG) \
 
 -include ../makefile.init
 
-RM := DEL /F
-RMDIR := RMDIR /S/Q
+RM := rm -rf
+RMDIR := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
@@ -152,34 +148,34 @@ all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@$(MAKE) --no-print-directory -Onone "rfPacketRx_CC1310_LAUNCHXL_tirtos_ccs.out"
 
 dependents:
-	-cd C:/Users/dell/workspace_v10/tirtos_builds_CC1310_LAUNCHXL_release_ccs/Debug && $(MAKE) clean all
+	-cd /Users/wsy/Desktop/Research/CCcode/CC1310IQSamples/tirtos_builds_CC1310_LAUNCHXL_release_ccs/Debug && $(MAKE) clean all
 
 # Tool invocations
-rfPacketRx_CC1310_LAUNCHXL_tirtos_ccs.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS) C:/Users/dell/workspace_v10/tirtos_builds_CC1310_LAUNCHXL_release_ccs/Debug/tirtos_builds_CC1310_LAUNCHXL_release_ccs.lib
+rfPacketRx_CC1310_LAUNCHXL_tirtos_ccs.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS) /Users/wsy/Desktop/Research/CCcode/CC1310IQSamples/tirtos_builds_CC1310_LAUNCHXL_release_ccs/Debug/tirtos_builds_CC1310_LAUNCHXL_release_ccs.lib
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: ARM Linker'
-	"C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/bin/armcl" -mv7M3 --code_state=16 --float_support=vfplib -me --define=DeviceFamily_CC13X0 --define=CCFG_FORCE_VDDR_HH=0 --define=SUPPORT_PHY_CUSTOM --define=SUPPORT_PHY_50KBPS2GFSK --define=SUPPORT_PHY_625BPSLRM --define=SUPPORT_PHY_5KBPSSLLR -g --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on -z -m"rfPacketRx_CC1310_LAUNCHXL_tirtos_ccs.map" -i"C:/ti/simplelink_cc13x0_sdk_4_10_02_04/source" -i"C:/ti/simplelink_cc13x0_sdk_4_10_02_04/kernel/tirtos/packages" -i"C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/lib" --diag_wrap=off --display_error_number --warn_sections --xml_link_info="rfPacketRx_CC1310_LAUNCHXL_tirtos_ccs_linkInfo.xml" --rom_model -o "rfPacketRx_CC1310_LAUNCHXL_tirtos_ccs.out" $(ORDERED_OBJS)
+	"/Applications/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M3 --code_state=16 --float_support=vfplib -me --define=DeviceFamily_CC13X0 --define=CCFG_FORCE_VDDR_HH=0 --define=SUPPORT_PHY_CUSTOM --define=SUPPORT_PHY_50KBPS2GFSK --define=SUPPORT_PHY_625BPSLRM --define=SUPPORT_PHY_5KBPSSLLR -g --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on -z -m"rfPacketRx_CC1310_LAUNCHXL_tirtos_ccs.map" -i"/source" -i"/kernel/tirtos/packages" -i"/Applications/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" --diag_wrap=off --display_error_number --warn_sections --xml_link_info="rfPacketRx_CC1310_LAUNCHXL_tirtos_ccs_linkInfo.xml" --rom_model -o "rfPacketRx_CC1310_LAUNCHXL_tirtos_ccs.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
 rfPacketRx_CC1310_LAUNCHXL_tirtos_ccs.hex: $(EXE_OUTPUTS)
 	@echo 'Building files: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo 'Invoking: ARM Hex Utility'
-	"C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/bin/armhex"  -o "rfPacketRx_CC1310_LAUNCHXL_tirtos_ccs.hex" $(EXE_OUTPUTS__QUOTED)
+	"/Applications/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex"  -o "rfPacketRx_CC1310_LAUNCHXL_tirtos_ccs.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo ' '
 
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "CC1310_LAUNCHXL.obj" "CC1310_LAUNCHXL_fxns.obj" "RFQueue.obj" "ccfg.obj" "main_tirtos.obj" "rfPacketRx.obj" "smartrf_settings\smartrf_settings.obj" 
-	-$(RM) "CC1310_LAUNCHXL.d" "CC1310_LAUNCHXL_fxns.d" "RFQueue.d" "ccfg.d" "main_tirtos.d" "rfPacketRx.d" "smartrf_settings\smartrf_settings.d" 
+	-$(RM) "CC1310_LAUNCHXL.obj" "CC1310_LAUNCHXL_fxns.obj" "RFQueue.obj" "ccfg.obj" "main_tirtos.obj" "rfPacketRx.obj" "smartrf_settings/smartrf_settings.obj" 
+	-$(RM) "CC1310_LAUNCHXL.d" "CC1310_LAUNCHXL_fxns.d" "RFQueue.d" "ccfg.d" "main_tirtos.d" "rfPacketRx.d" "smartrf_settings/smartrf_settings.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 
 .PHONY: all clean dependents
 .SECONDARY:
-C:/Users/dell/workspace_v10/tirtos_builds_CC1310_LAUNCHXL_release_ccs/Debug/tirtos_builds_CC1310_LAUNCHXL_release_ccs.lib:
+/Users/wsy/Desktop/Research/CCcode/CC1310IQSamples/tirtos_builds_CC1310_LAUNCHXL_release_ccs/Debug/tirtos_builds_CC1310_LAUNCHXL_release_ccs.lib:
 
 -include ../makefile.targets
 

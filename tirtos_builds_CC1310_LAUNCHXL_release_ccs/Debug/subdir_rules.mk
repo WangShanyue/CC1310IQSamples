@@ -2,8 +2,6 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
-SHELL = cmd.exe
-
 # Each subdirectory must supply rules for building sources it contributes
 build-1317695535:
 	@$(MAKE) --no-print-directory -Onone -f subdir_rules.mk build-1317695535-inproc
@@ -11,7 +9,7 @@ build-1317695535:
 build-1317695535-inproc: ../release.cfg
 	@echo 'Building file: "$<"'
 	@echo 'Invoking: XDCtools'
-	"C:/ti/ccs1011/xdctools_3_61_02_27_core/xs" --xdcpath="C:/ti/simplelink_cc13x0_sdk_4_10_02_04/source;C:/ti/simplelink_cc13x0_sdk_4_10_02_04/kernel/tirtos/packages;" xdc.tools.configuro -o configPkg -t ti.targets.arm.elf.M3 -p ti.platforms.simplelink:CC1310F128 -r release -c "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS" --compileOptions " -DDeviceFamily_CC13X0 " "$<"
+	"/Applications/ti/ccs1000/xdctools_3_61_00_16_core/xs" --xdcpath= xdc.tools.configuro -o configPkg -t ti.targets.arm.elf.M3 -p ti.platforms.simplelink:CC1310F128 -r release -c "/Applications/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS" --compileOptions " -DDeviceFamily_CC13X0 " "$<"
 	@echo 'Finished building: "$<"'
 	@echo ' '
 

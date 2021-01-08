@@ -2,10 +2,6 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
-SHELL = cmd.exe
-
-CG_TOOL_ROOT := C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS
-
 GEN_OPTS__FLAG := --cmd_file="configPkg/compiler.opt" 
 GEN_CMDS__FLAG := "configPkg/linker.cmd" 
 
@@ -13,8 +9,8 @@ ORDERED_OBJS += \
 
 -include ../makefile.init
 
-RM := DEL /F
-RMDIR := RMDIR /S/Q
+RM := rm -rf
+RMDIR := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
@@ -135,7 +131,7 @@ tirtos_builds_CC1310_LAUNCHXL_release_ccs.lib: $(OBJS) $(OBJ_SRCS)
 ifneq ($(strip $(ORDERED_OBJS)),)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: ARM Archiver'
-	"C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/bin/armar" r "tirtos_builds_CC1310_LAUNCHXL_release_ccs.lib" $(ORDERED_OBJS)
+	"/Applications/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armar" r "tirtos_builds_CC1310_LAUNCHXL_release_ccs.lib" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 endif
